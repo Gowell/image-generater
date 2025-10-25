@@ -86,11 +86,20 @@ export default function Home() {
                   {feature.description}
                 </p>
                 
-                <button 
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${feature.color} text-white hover:opacity-90`}
-                >
-                  立即使用
-                </button>
+                {feature.id === 'compress' ? (
+                  <a 
+                    href="/compress"
+                    className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${feature.color} text-white hover:opacity-90`}
+                  >
+                    立即使用
+                  </a>
+                ) : (
+                  <button 
+                    className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${feature.color} text-white hover:opacity-90`}
+                  >
+                    立即使用
+                  </button>
+                )}
               </div>
             </div>
           ))}
