@@ -86,9 +86,9 @@ export default function Home() {
                   {feature.description}
                 </p>
                 
-                {feature.id === 'compress' ? (
+                {(feature.id === 'compress' || feature.id === 'remove-bg') ? (
                   <a 
-                    href="/compress"
+                    href={feature.id === 'compress' ? '/compress' : '/remove-bg'}
                     className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${feature.color} text-white hover:opacity-90`}
                   >
                     立即使用
